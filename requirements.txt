@@ -1,0 +1,8 @@
+loguru==0.5.3
+numpy==1.20.1
+scipy==1.6.1
+pandas==1.2.3
+scikit_learn==0.24.1
+fastapi==0.63.0
+uvicorn[standard]==0.13.4
+requests==2.25.1
