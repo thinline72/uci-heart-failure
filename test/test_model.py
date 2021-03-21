@@ -60,12 +60,12 @@ class TestModel(unittest.TestCase):
 
     def test_predict_neg_correct(self):
         prob, pred = self.model.predict(data=self.neg_data)
-        self.assertLessEqual(prob, self.model.cl_thr)
+        self.assertLessEqual(prob, self.model.predict_threshold)
         self.assertFalse(pred)
 
     def test_predict_pos_correct(self):
         prob, pred = self.model.predict(data=self.pos_data)
-        self.assertGreaterEqual(prob, self.model.cl_thr)
+        self.assertGreaterEqual(prob, self.model.predict_threshold)
         self.assertTrue(pred)
 
     def test_predict_error_if_not_trained(self):
